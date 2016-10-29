@@ -56,5 +56,6 @@ shinyUI(fluidPage(title = "Movie box office data, interactive app",
     )
   ),
 tags$a(href="http://www.boxofficemojo.com/alltime/domestic.htm", 
-       "Data source: Box Office Mojo")
+       "Data source: Box Office Mojo"), tags$b("  -  "), 
+tags$a(href="http://www.github.com/eliasdabbas/boxoffice", "Source code")
 ))
