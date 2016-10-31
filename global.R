@@ -1,7 +1,8 @@
 library(tidyverse)
 library(advertools)
 library(ggrepel)
-boxoffice_sum <- boxoffice %>% group_by(studio, year) %>% 
+load("data/boxoffice.Rda")
+boxoffice_sum <- boxoffice %>% group_by(studio_name, year) %>% 
   summarise(n = n(), gross = sum(lifetime_gross, na.rm = TRUE)) %>% 
   mutate(gross_permovie = round(gross / n))
 
